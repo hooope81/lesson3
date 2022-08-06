@@ -1,18 +1,13 @@
 <?php
-$wishes = ["счастья", "здоровья", "успеха", "благополучия", "веселья", "достатка", "тепла"];
-$adjective = ["крепкого", "большого", "бесконечного", "взаимного", "головокружительного", "космического", "безудержного"];
-$new = [];
-$name = readline("Как зовут именинника? ");
+$numbers = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 
-shuffle($wishes);
-shuffle($adjective);
-for ($i = 0; $i < 3; $i++) {
-    $new[] = "$adjective[$i] $wishes[$i]";
+function analysisArr (array $arr) : array
+{
+    return [
+        "max" => max($arr),
+        "min" => min($arr),
+        "avg" => array_sum($arr) / count($arr)
+    ];
 }
-$str = implode( ", ", $new);
-$index = strrpos($str, ", ");
-$str = substr_replace($str, " и", $index, 1);
 
-echo "Дорогой $name, от всего сердца поздравляю тебя с днем рождения, желаю $str!\n";
-
-
+print_r(analysisArr($numbers));
