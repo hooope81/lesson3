@@ -1,11 +1,11 @@
 <?php
-$arr1 = range(1, 10);
-$arr2 = range(11, 20);
-$arrNew = [];
+$arr = [4, 5, 1, 4, 7, 8, 15, 6, 71, 45, 2];
 
-foreach ($arr1 as $key => $item) {
-    $value = $item * $arr2[$key];
-    $arrNew[] = $value;
-}
+$newArr = array_map(
+    function ($item) {
+        return $item % 2 ? "нечетное" : "четное";
+    },
+    $arr
+);
 
-print_r($arrNew);
+print_r($newArr);
