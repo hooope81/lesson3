@@ -2,7 +2,7 @@
 
 Таблицы
 
-1) Таблица пользователей
+1) Таблица пользователей - ye;yf
 
 CREATE TABLE users (
 id SERIAL PRIMARY KEY,
